@@ -21,6 +21,7 @@ public class User implements UserDetails {
 
     private String username;
     private String password;
+//    @Getter  // 이것만 추가!
     private String fullname;
     private String street;
     private String city;
@@ -51,6 +52,9 @@ public class User implements UserDetails {
 
     @Override
     public String getPassword() { return password; }
+
+//    @Override
+//    public String getFullname() { return fullname; }
 
     @Override
     public boolean isAccountNonExpired() {
