@@ -21,7 +21,7 @@ public class User implements UserDetails {
 
     private String username;
     private String password;
-//    @Getter  // 이것만 추가!
+    @Getter  // 이것만 추가!
     private String fullname;
     private String street;
     private String city;
