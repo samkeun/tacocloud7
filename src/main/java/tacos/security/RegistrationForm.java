@@ -16,6 +16,9 @@ public class RegistrationForm {
     private String phone;
 
     public User toUser(PasswordEncoder passwordEncoder) {
+        if (password == null || password.isBlank()) {
+            throw new IllegalStateException("Password is missing");
+        }
         return new User(
                 username, passwordEncoder.encode(password),
                 fullname, street, city, state, zip, phone);
